@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:52:12 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/03 17:56:34 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/04 15:04:45 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_atoi(char *str);
 int				ft_strlen(char *str);
-int				ft_strncmp(char *s1, char *s2, unsigned int n)
+int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strchr(const char *str, int c);
+char			*ft_strrchr(const char *str, int c);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
 #endif
