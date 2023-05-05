@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 18:16:48 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/05 11:18:45 by julberna         ###   ########.fr       */
+/*   Created: 2023/05/05 13:52:34 by julberna          #+#    #+#             */
+/*   Updated: 2023/05/05 18:17:06 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
 
 	i = 0;
-	j = 0;
-	if (little[0] == '\0')
-		return (big);
-	while (big[i] != '\0' && i < len)
+	while (src[i] != '\0' && i < n)
 	{
-		if (big[i] == little[j])
-		{
-			i++;
-			j++;
-			if (little[j] == '\0')
-				return (&big[i - j]);
-			else if (big[i] != little[j])
-				j = 0;
-		}
-		else
-		{
-			i++;
-		}
-	}	
-	return (NULL);
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
