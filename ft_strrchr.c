@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:18:08 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/04 15:03:44 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/06 22:49:08 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	size;
 
-	size = ft_strlen(str);
+	size = ft_strlen((char *)str);
 	while (size >= 0)
 	{
 		if (str[size] == (char)c)
