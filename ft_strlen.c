@@ -6,13 +6,15 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 00:56:24 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/03 00:56:32 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:43:49 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')

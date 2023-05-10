@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:52:34 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/06 21:35:00 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:35:17 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	srclen;
 
-	srclen = 0;
-	while (src[srclen] != '\0')
-	{
-		srclen++;
-	}
+	srclen = ft_strlen((char *)src);
 	if (size == 0)
 		return (srclen);
 	i = 0;
