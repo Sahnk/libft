@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 14:42:30 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/08 18:21:08 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:15:58 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	cache_s1 = (unsigned char *)s1;
 	cache_s2 = (unsigned char *)s2;
-	while (cache_s1[i] != '\0' && cache_s2[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (cache_s1[i] != cache_s2[i])
+		{
 			return (cache_s1[i] - cache_s2[i]);
+		}
 		i++;
 	}
 	return (0);

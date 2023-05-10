@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 19:10:38 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/06 22:13:55 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:20:31 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	size_t			src_len;
-	char			temp[100];
+	char			temp[ft_strlen((char *)src)];
 	unsigned char	*cache_src;
 	unsigned char	*cache_dest;
 
-	i = 0;
-	src_len = 0;
 	cache_dest = (unsigned char *)dest;
 	cache_src = (unsigned char *)src;
-	while (cache_src[i] != '\0')
-	{
-		temp[i] = cache_src[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		cache_dest[i] = temp[i];
-		i++;
-	}
+	ft_memcpy(temp, cache_src, n);
+	ft_memcpy(cache_dest, temp, n);
 	return (cache_dest);
 }
