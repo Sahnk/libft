@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:01:16 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/10 16:32:48 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/11 17:50:46 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,33 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 	i = 0;
 	if (size <= dest_len)
 		return (size + src_len);
-	if (dest_len > 0)
+	while ((dest_len + i + 1) < size && src[i] != '\0')
 	{
-		while ((src[i] != '\0') && ((i + dest_len) <= size) && (dest[dest_len + i] != '\0'))
-		{
-			dest[dest_len + i] = src[i];
-			i++;
-		}
-		dest[dest_len + i] = '\0';
+		dest[dest_len + i] = src[i];
+		i++;
 	}
+	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// if (dest_len > 0)
+	// {
+	// 	while ((src[i] != '\0') && ((i + dest_len) <= size) && (dest[dest_len + i] != '\0'))
+	// 	{
+	// 		dest[dest_len + i] = src[i];
+	// 		i++;
+	// 	}
+	// 	dest[dest_len + i] = '\0';
+	// }
 }
