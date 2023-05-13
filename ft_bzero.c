@@ -6,22 +6,13 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 18:16:04 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/06 21:34:34 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/12 18:17:18 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
-	unsigned char	*cache_str;
-
-	i = 0;
-	cache_str = (unsigned char *)s;
-	while (i < n)
-	{
-		cache_str[i] = '\0';
-		i++;
-	}
+	ft_memset(s, '\0', n);
 }

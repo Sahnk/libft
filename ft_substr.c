@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 01:01:16 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/12 12:37:26 by julberna         ###   ########.fr       */
+/*   Created: 2023/05/12 11:22:35 by julberna          #+#    #+#             */
+/*   Updated: 2023/05/12 16:30:36 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	i;
-
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen((char *)src);
-	i = 0;
-	if (size <= dest_len)
-		return (size + src_len);
-	while ((dest_len + i + 1) < size && src[i] != '\0')
+	char	*substr;
+	
+	if (s == NULL)
+		return (NULL);
+	if (start > ft_strlen(s))
 	{
-		dest[dest_len + i] = src[i];
-		i++;
+		len = 0;
+		start = ft_strlen(s);
 	}
-	dest[dest_len + i] = '\0';
-	return (dest_len + src_len);
+	if (ft_strlen(s + start) < len)
+	{
+		len = ft_strlen(s + start);
+	}
+	substr = malloc(len + 1);
+	if (substr == NULL)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (NULL);
 }
