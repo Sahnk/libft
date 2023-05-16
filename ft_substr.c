@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:22:35 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/12 16:30:36 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:33:44 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		start = ft_strlen(s);
 	}
 	if (ft_strlen(s + start) < len)
-	{
 		len = ft_strlen(s + start);
-	}
-	substr = malloc(len + 1);
+	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_strlcpy(substr, s + start, len + 1);
-	return (NULL);
+	return (substr);
 }
