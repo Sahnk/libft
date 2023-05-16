@@ -1,27 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 00:56:24 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/16 12:38:07 by julberna         ###   ########.fr       */
+/*   Created: 2023/05/15 22:10:58 by julberna          #+#    #+#             */
+/*   Updated: 2023/05/16 20:58:45 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_wordcount(char *s, char c)
 {
-	size_t	i;
+	int	i;
+	int	words;
 
 	i = 0;
-	if (str == NULL)
-		return (0);
-	while (str[i] != '\0')
+	words = 0;
+	while (s[i] != '\0')
 	{
+		if (s[i] == c)
+			words++;
 		i++;
 	}
-	return (i);
+	return (words);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	int	s_words;
+
+	if (s == NULL || c == NULL)
+		return (NULL);
+
+	s_words = ft_wordcount(&s, c);
+
+	char	*split[s_words];
+	while (s*)
+	{
+		while (s* == c)
+			s++;
+		if 
+	}
 }

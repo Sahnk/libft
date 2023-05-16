@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 14:16:38 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/15 21:31:02 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:58:00 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	size;
+	char	*trimmed;
 	
 	if (s1 == NULL || set == NULL)
 		return (NULL);
@@ -22,10 +23,11 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (ft_strchr(set, *s1) && *s1)
 		s1++;
 	
-	size = ft_strlen(s1) - 1;
+	size = ft_strlen(s1);
 
-	while (ft_strchr(set, s1[size]) && size)
+	while (ft_strchr(set, s1[size - 1]) && size)
 		size--;
-
-	return (ft_substr(s1, 0, size + 1));
+	trimmed = ft_calloc(size + 1, sizeof(char));
+	ft_strlcpy(trimmed, s1, size + 1);
+	return (trimmed);
 }
