@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 19:10:38 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/09 19:20:31 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:31:55 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char			temp[ft_strlen((char *)src)];
+	char			temp[16384];
 	unsigned char	*cache_src;
 	unsigned char	*cache_dest;
 
