@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 11:53:15 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/24 15:37:51 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/24 18:38:37 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	size;
-	char 			*str;
+	char			*str;
 
 	i = 0;
 	size = ft_strlen(s);

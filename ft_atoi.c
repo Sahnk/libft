@@ -6,21 +6,14 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:32:47 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/10 18:34:36 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/24 19:40:54 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
-{
-	int	i;
-	int	num;
-	int	negative;
-	char	*str;
+#include "libft.h"
 
-	i = 0;
-	negative = 0;
-	num = 0;
-	str = (char *)nptr;
+int	ft_write_number(int i, int num, int negative, char *str)
+{
 	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
 	{
 		i++;
@@ -39,4 +32,18 @@ int	ft_atoi(const char *nptr)
 	if (negative == 1)
 		num = -num;
 	return (num);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int		i;
+	int		num;
+	int		negative;
+	char	*str;
+
+	i = 0;
+	negative = 0;
+	num = 0;
+	str = (char *)nptr;
+	return (ft_write_number(i, num, negative, str));
 }

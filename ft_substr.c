@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:22:35 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/15 15:33:44 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/24 18:39:36 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	
+
 	if (s == NULL)
 		return (NULL);
 	if (start > ft_strlen(s))

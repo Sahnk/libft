@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:34:48 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/23 21:19:32 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/24 18:37:25 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_count_bytes(long int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n < 0)
@@ -33,17 +33,17 @@ int	ft_count_bytes(long int n)
 
 void	ft_write_numbers(char *str, long int ln, int bytes)
 {
-		if (ln < 0)
-		{
-			str[0] = '-';
-			ln = -ln;
-		}
-		while (ln > 0)
-		{
-			str[bytes] = (ln % 10) + 48;
-			ln /= 10;
-			bytes--;
-		}
+	if (ln < 0)
+	{
+		str[0] = '-';
+		ln = -ln;
+	}
+	while (ln > 0)
+	{
+		str[bytes] = (ln % 10) + 48;
+		ln /= 10;
+		bytes--;
+	}
 }
 
 char	*ft_itoa(int n)
