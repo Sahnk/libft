@@ -3,7 +3,7 @@
 NAME = libft.a
 
 CC = gcc
-CFLAGS = -Werror -Wall -Wextra
+CFLAGS = -Werror -Wall -Wextra -g
 
 SRC = $(wildcard ./*.c)
 OBJ = ${SRC:.c=.o}
@@ -11,7 +11,7 @@ OBJ = ${SRC:.c=.o}
 all: $(NAME)
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@ 
 
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
