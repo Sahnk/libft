@@ -15,7 +15,7 @@ MANDATORY_SRC = ft_isalnum.c	ft_isalpha.c	ft_isascii.c	ft_isdigit.c \
 				ft_memcpy.c		ft_memmove.c	ft_striteri.c	ft_strlen.c \
 				ft_strlcpy.c	ft_strlcat.c
 
-BONUS_SRC = 	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c
+BONUS_SRC = 	ft_lstnew.c	ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c \
 
 MANDATORY_OBJ = ${MANDATORY_SRC:.c=.o}
 BONUS_OBJ = ${BONUS_SRC:.c=.o}
