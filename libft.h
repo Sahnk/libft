@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:52:12 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/24 18:37:46 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/25 13:52:19 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <string.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
@@ -52,5 +58,8 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t			ft_strlen(const char *str);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 unsigned int	ft_strlcat(char *dest, const char *src, size_t size);
+
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
