@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:52:45 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/24 19:08:51 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:03:28 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	cache_s = (unsigned char *)s;
-	if ((unsigned char)n == '\0')
+	if (n == '\0')
 		return (NULL);
 	while (i < n)
 	{

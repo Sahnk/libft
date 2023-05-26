@@ -6,17 +6,17 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 22:10:58 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/24 15:18:29 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:55:44 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_wordcount(char *s, char c)
+static int	ft_wordcount(char *s, char c)
 {
 	int	i;
 	int	words;
-	int	old_i;
+	int	start;
 
 	i = 0;
 	words = 0;
@@ -28,20 +28,20 @@ int	ft_wordcount(char *s, char c)
 				break ;
 			i++;
 		}
-		old_i = i;
+		start = i;
 		while (s[i] != '\0')
 		{
 			if (s[i] == c)
 				break ;
 			i++;
 		}
-		if (i > old_i)
+		if (i > start)
 			words++;
 	}
 	return (words);
 }
 
-void	ft_word_processing(const char *s, char c, char **split, int i)
+static void	ft_word_processing(const char *s, char c, char **split, int i)
 {
 	int		start;
 	size_t	string_index;

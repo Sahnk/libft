@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 21:19:23 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/25 21:37:54 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:38:25 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*next;
+	t_list	*buffer;
 
 	while (*lst)
 	{
-		next = (*lst)->next;
+		buffer = (*lst)->next;
 		ft_lstdelone(*lst, del),
-		*lst = next;
+		*lst = buffer;
 	}
 	*lst = NULL;
 }
