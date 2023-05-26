@@ -6,13 +6,13 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 01:32:47 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/24 19:40:54 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:46:06 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_write_number(int i, int num, int negative, char *str)
+static int	ft_write_number(int i, int num, int negative, char *str)
 {
 	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
 	{
