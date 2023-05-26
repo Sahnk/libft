@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 01:01:16 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/26 00:44:36 by julberna         ###   ########.fr       */
+/*   Created: 2023/05/25 22:19:15 by julberna          #+#    #+#             */
+/*   Updated: 2023/05/26 00:44:06 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	i;
+	t_list	*map;
+	t_list	*buffer;
+	t_list	*ptr;
 
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen((char *)src);
-	i = 0;
-	if (size <= dest_len)
-		return (size + src_len);
-	while ((dest_len + i + 1) < size && src[i] != '\0')
+	ptr = &(*lst);
+	map = NULL;
+	while (ptr)
 	{
-		dest[dest_len + i] = src[i];
-		i++;
+		buffer = ft_lstnew(f(ptr->content));
+		if (!buffer)
+			ft_lstdelone(buffer, del);
+		else
+			ft_lstadd_back(&map, buffer);
+		ptr = ptr->next;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest_len + src_len);
+	return (map);
 }
