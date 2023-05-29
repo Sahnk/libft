@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 00:56:24 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/16 12:38:07 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/28 02:41:23 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	if (str == NULL)
-		return (0);
 	while (str[i] != '\0')
 	{
 		i++;

@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 22:10:58 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/26 16:55:44 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/28 02:48:38 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	word_count = ft_wordcount((char *)s, c);
 	split = (char **)ft_calloc((word_count + 1), sizeof(char *));
+	if (!split)
+		return (NULL);
 	ft_word_processing(s, c, split, i);
 	return (split);
 }

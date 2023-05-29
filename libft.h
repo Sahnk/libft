@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:52:12 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/26 00:46:15 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/28 22:31:19 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
-# include <string.h>
 
 typedef struct s_list
 {

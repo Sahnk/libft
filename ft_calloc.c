@@ -6,7 +6,7 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:09:42 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/23 21:09:44 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/28 22:51:32 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	int		result;
 
-	if (size == 0 || nmemb == 0 || (nmemb * size) / nmemb != size)
-		return (NULL);
-	ptr = malloc(nmemb * size);
-	ft_bzero(ptr, (nmemb * size));
+	result = nmemb * size;
+	if (!nmemb || !size || nmemb == result / size)
+		ptr = malloc(result);
+	if (ptr)
+		ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }
