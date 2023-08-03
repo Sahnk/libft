@@ -6,12 +6,11 @@
 /*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:26:41 by julberna          #+#    #+#             */
-/*   Updated: 2023/05/28 02:46:56 by julberna         ###   ########.fr       */
+/*   Updated: 2023/05/29 00:22:52 by julberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {
